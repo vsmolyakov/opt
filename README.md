@@ -1,5 +1,5 @@
 # opt
-This project is a collection of optimization utilities with the purpose of experimenting with different optimization programs.
+This project is a collection of optimization utilities for the purpose of experimenting with different optimization programs.
 
 ### Description
 
