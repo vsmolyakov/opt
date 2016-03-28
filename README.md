@@ -1,15 +1,35 @@
 # opt
-This project is a collection of optimization utilities for the purpose of experimenting with different optimization programs.
+Optimization Algorithms
 
 ### Description
 
-Least Squares:  
-irls.m: Iterative Reweighted Least Squares for Fitting Probit Regression Objective Function
+**Iterative Reweighted Least Squares**
 
-Semidefinite Programming:  
-max_cut_sdp.m: Finding the Maximum Cut of a Petersen Graph using SDP  
-stable_set_sdp.m: Compute Independent Set of a Petersen Graph using SDP
+The Iterative Reweighted Least Squares (IRLS) algorithm solves minimizes a weighted least squares objective function where the weights are updated at every iteration. Here IRLS is used to fit Bayesian Logistic Regression model.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/figures/irls.png" width = "400" />
+</p>
+
+The figure above shows the MSE of the hyperplane parameter vs IRLS iterations. The IRLS algorithm is derived from the Newton's algorithm by computing the gradient and the Hessian of Logistic Regression in closed form.
+
+References:  
+*K. Murphy, "Machine Learning: A Probabilistic Perspective", 2012.*  
+
+**Semidefinite Programming**
+
+Semidefinite programs optimize over semidefinite matrices and have been used to find approximate solutions to combinatorial optimization problems. The figure below shows the optimum SDP matrix for a MAX CUT problem (left) and stable set problem (right) for a Petersen graph.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/figures/sdp_merged.png"/>
+</p>
+
+The SDP program finds the maximum stable set of size 4 and maximum cut of value 12.
+
+References:  
+*S. Boyd and L. Vandenberghe, "Convex Optimization", 2004*
  
 ### Dependencies
 
-Matlab 2014a, CVX 2.1
+Matlab 2014a  
+CVX 2.1  
