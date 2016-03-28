@@ -1,3 +1,5 @@
+function [] = irls()
+
 %% Iterative Reweighted Least Squares (IRLS) for Logistic Regression
 %  MAP estimation of hyperplane w with L1 penalty
 %
@@ -36,7 +38,7 @@ for k=1:max_num_iter
     
     mu_k = sigm(X,y,w(:,k));        %bernoulli probability   
     Sk = mu_k.*(1-mu_k) + eps;      %weight matrix 
-    z_k = X*w(:,k)+(1-mu_k).*y./Sk; %response update
+    z_k = X*w(:,k)+(1-mu_k).*y./Sk; %response update, y \in {+1,-1}
     
     %w(:,k+1)=inv(X'*Sk*X + vInv)*(X'*Sk*z_k); %w update
     Xd=X'*sparse(diag(Sk)); R=chol(Xd*X+vInv);
@@ -60,4 +62,27 @@ end
 xlabel('iterations'); ylabel('MSE'); legend(legendInfo);
 title('MSE vs iterations for IRLS Logistic Regression');
 
+end
 
+function y = cummean(x,dim)
+
+if nargin==1,
+  % Determine which dimension CUMSUM./[1:N] will use
+  dim = min(find(size(x) ~= 1));
+  if isempty(dim), dim = 1; end
+end
+
+siz = [size(x) ones(1, dim-ndims(x))];
+n = size(x, dim);
+
+% Permute and reshape so that DIM becomes the row dimension of a 2-D array
+perm = [dim:max(length(size(x)), dim) 1:dim-1];
+x = reshape(permute(x, perm), n, prod(siz)/n);
+
+% Calculate cummulative mean
+y = cumsum(x, 1)./repmat([1:n]', 1, prod(siz)/n);
+
+% Permute and reshape back
+y = ipermute(reshape(y, siz(perm)), perm);
+
+end
