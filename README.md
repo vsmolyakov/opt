@@ -28,6 +28,20 @@ The SDP program finds the maximum stable set of size 4 and the maximum cut of va
 
 References:  
 *S. Boyd and L. Vandenberghe, "Convex Optimization", 2004*
+
+**De-blurring**
+
+Many computer vision tasks can be formulated as an optimization program. For example, given a blur kernel D and the blurred image G, we can formulate a constrained least squares problem solved using an optimization toolbox in Matlab.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/figures/blur_merged.png"/>
+</p>
+
+The figure above shows the original, the blurred, and the deblurred images. We can see that the deblurred image closely resembles the original. Similar optimization programs can be formulated for image in-painting and denoising.
+
+References:  
+*D. Zoran and Y. Weiss, "From Learning Models of Natural Image Patches to Whole Image Restoration", ICCV 2011.*
+
  
 ### Dependencies
 
