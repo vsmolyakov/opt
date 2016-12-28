@@ -42,8 +42,22 @@ The figure above shows the original, the blurred, and the deblurred images. We c
 References:  
 *D. Zoran and Y. Weiss, "From Learning Models of Natural Image Patches to Whole Image Restoration", ICCV 2011.*
 
+**Inpainting**
+
+Inpainting removes text and other masked features that do not belong to the original image. The reconstructed image is obtained by minimizing the total variation norm subject to matching of known pixels constraint.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/figures/inpainting_merged.png"/>
+</p>
+
+The figure above shows the inpainted image on the left and the corrupted image on the right. The SCS solver of CVXPY is able to correctly recover the image.
+
+References:  
+*http://www.cvxpy.org/en/latest/examples/index.html*
+
  
 ### Dependencies
 
 Matlab 2014a  
-CVX 2.1  
+CVX 2.1
+Python 2.7
