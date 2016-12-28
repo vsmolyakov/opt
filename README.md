@@ -59,5 +59,5 @@ References:
 ### Dependencies
 
 Matlab 2014a  
-CVX 2.1
-Python 2.7
+CVX 2.1  
+Python 2.7  
