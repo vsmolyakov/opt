@@ -29,6 +29,19 @@ The SDP program finds the maximum stable set of size 4 and the maximum cut of va
 References:  
 *S. Boyd and L. Vandenberghe, "Convex Optimization", 2004*
 
+**Markowitz Portfolio**
+
+The goal of portfolio optimization is to find optimum portfolio weights that minimize portfolio variance while maximizing portfolio return. The optimum portfolio weights are found through convex programming. 
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/figures/markowitz.png"/>
+</p>
+
+The figure above shows the distribution of optimal portfolio weights solved by CVX. 
+
+References:  
+*http://cvxr.com/cvx/examples/*
+
 **De-blurring**
 
 Many computer vision tasks can be formulated as an optimization program. For example, given a blur kernel D and the blurred image G, we can formulate a constrained least squares problem solved using an optimization toolbox in Matlab.
