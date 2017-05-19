@@ -42,6 +42,19 @@ The figure above shows the distribution of optimal portfolio weights solved by C
 References:  
 *http://cvxr.com/cvx/examples/*
 
+**Simulated Annealing**
+
+Simulated annealing is a stochastic algorithm that attempts to find the global optimum of a function f(x). The method is inspired by statistical physics: the Boltzmann distribution that specifies the probability of being in a particular state as p(x) ~ exp(-f(x)/T). Where f(x) is the energy of the system and T is the temperature. As the system cools, it spends more and more time in its minimum energy (most probable) state.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/sim_annealing/figures/sim_annealing_merged.png"/>
+</p>
+
+The figure above shows the function f(x) at two different temperatures (left). As the temperature cools, the largest peaks become larger and the smallest peaks disappear. By cooling according to a schedule it is possible to track the largest peak and therefore find a global optimum. The energy of the signal, the cooling temperature and the histogram of accepted samples are shown on the right.
+
+References:  
+*K. Murphy, "Machine Learning: A Probabilistic Perspective", 2012.*  
+
 **De-blurring**
 
 Many computer vision tasks can be formulated as an optimization program. For example, given a blur kernel D and the blurred image G, we can formulate a constrained least squares problem solved using an optimization toolbox in Matlab.
