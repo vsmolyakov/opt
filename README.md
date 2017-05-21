@@ -50,7 +50,7 @@ Simulated annealing is a stochastic algorithm that attempts to find the global o
 <img src="https://github.com/vsmolyakov/opt/blob/master/sim_annealing/figures/sim_annealing_merged.png"/>
 </p>
 
-The figure above shows the function f(x) at two different temperatures (left). As the temperature cools, the largest peaks become larger and the smallest peaks disappear. By cooling according to a schedule it is possible to track the largest peak and therefore find a global optimum. The energy of the signal, the cooling temperature and the histogram of accepted samples are shown on the right.
+The figure above shows the function f(x) at two different temperatures (left). As the temperature cools, the largest peaks become larger and the smallest peaks disappear. By cooling according to a schedule it is possible to track the largest peak and therefore find a global optimum. The energy of the system, the cooling temperature and the histogram of accepted samples are shown on the right.
 
 References:  
 *K. Murphy, "Machine Learning: A Probabilistic Perspective", 2012.*  
