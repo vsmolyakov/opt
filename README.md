@@ -55,6 +55,20 @@ The figure above shows the function f(x) at two different temperatures (left). A
 References:  
 *K. Murphy, "Machine Learning: A Probabilistic Perspective", 2012.*  
 
+**Bayesian Optimization**
+
+Bayesian Optimization uses a Gaussian Process (GP) to construct a posterior distribution that describes the function you want to optimize. As the number of observations increases, the algorithm becomes more certain of which regions in the parameter space are worth exploring and which are not thus balancing exploration vs exploitation trade-off.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/opt/blob/master/bayes_opt/figures/bayes_opt_merged.png"/>
+</p>
+
+The figure above shows bayesian optimization of F1 score as a function of gamma parameter for SVM RBF kernel (left). We can see that after 7 iterations, we have discovered the gamma parameter that gives the maximum F1 score. The peak of the utility function at the bottom tells us which experiment to perform next. On the right, bayesian optimization is used to maximize F1 score as a function of maximum depth and number of estimators for a random forest classifier. We can see that the maximum score is achieved for 158 estimators with depth 10.
+
+References:  
+*https://github.com/fmfn/BayesianOptimization*  
+
+
 **De-blurring**
 
 Many computer vision tasks can be formulated as an optimization program. For example, given a blur kernel D and the blurred image G, we can formulate a constrained least squares problem solved using an optimization toolbox in Matlab.
