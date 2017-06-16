@@ -63,7 +63,7 @@ Bayesian Optimization uses a Gaussian Process (GP) to construct a posterior dist
 <img src="https://github.com/vsmolyakov/opt/blob/master/bayes_opt/figures/bayes_opt_merged.png"/>
 </p>
 
-The figure above shows bayesian optimization of F1 score as a function of gamma parameter for SVM RBF kernel (left). We can see that after 7 iterations, we have discovered the gamma parameter that gives the maximum F1 score. The peak of the utility function at the bottom tells us which experiment to perform next. On the right, bayesian optimization is used to maximize F1 score as a function of maximum depth and number of estimators for a random forest classifier. We can see that the maximum score is achieved for 158 estimators with depth 10.
+The figure above shows bayesian optimization of F1 score as a function of gamma parameter for SVM RBF kernel (left). We can see that after 7 iterations, we have discovered the gamma parameter that gives the maximum F1 score. The peak of the utility function at the bottom tells us which experiment to perform next. On the right, bayesian optimization is used to maximize F1 score as a function of maximum depth and number of estimators for a random forest classifier. From the heatmap, we can tell that the maximum F1 score is achieved for 158 estimators with depth 10.
 
 References:  
 *https://github.com/fmfn/BayesianOptimization*  
